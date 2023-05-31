@@ -73,8 +73,8 @@
             <input type="text" id="chat-date" name="chatDate" required>
           </div>
           <div>
-            <label class="chat-label" for="chat-date">희망 여행 테마</label>
-            <input type="text" id="chat-date" name="chatDate" required>
+            <label class="chat-label" for="chat-theme">희망 여행 테마</label>
+            <input type="text" id="chat-theme" name="chatTheme" required>
           </div>
           <fieldset class="chat-field">
             <legend>자동차 유무</legend>
@@ -109,30 +109,65 @@
         </form>
       </div>
       <div>
-        <ul></ul>
-        <form action="post">
-          <input type="text" autofocus />
-          <button type="submit">전송</button>
-        </form>
+        <h2 class="chat-head">여행 일정</h2>
+        <textarea
+          class="chat-textarea"
+          name="content"
+          id="user-content"
+          cols="30"
+          rows="10"
+          readonly
+        ></textarea>
       </div>
-
       <script>
-        const $form = document.querySelector("form");
-        const $input = document.querySelector("input");
-        const $chatList = document.querySelector("ul");
-
         // openAI API
         let url = `https://estsoft-openai-api.jejucodingcamp.workers.dev/`;
 
+        // 국가/지역 값 읽어오기
+        let cityInput = document.getElementById("chat-city");
+        let city = cityInput.value;
+
+        // 여행 기간 값 읽어오기
+        let dateInput = document.getElementById("chat-date");
+        let date = dateInput.value;
+
+        // 희망 여행 테마 값 읽어오기
+        let themeInput = document.getElementsByName("chatTheme")[1];
+        let theme = themeInput.value;
+
+        // 자동차 유무 값 읽어오기
+        let carOptionInputs = document.getElementsByName("car-option");
+        let carOption;
+        for (let i = 0; i < carOptionInputs.length; i++) {
+        if (carOptionInputs[i].checked) {
+        carOption = carOptionInputs[i].value;
+        break;
+        }
+        }
+
         // 사용자의 질문
         let question;
+
+        // 사용자의 질문을 객체를 만들어서 push
+        const sendQuestion = (question) => {
+          if (question) {
+            data.push({
+              role: "user",
+              content: `여행계획을 만들어줘. 기간:${date}, 지역:${city}, 희망여행테마:${theme},자동차유무:${carOption} \n 이 내용을 기반으로 여행계획을 만들어줘`,
+            });
+            questionData.push({
+              role: "user",
+              content: `여행계획을 만들어줘. 기간:${date}, 지역:${city}, 희망여행테마:${theme},자동차유무:${carOption} \n 이 내용을 기반으로 여행계획을 만들어줘`,
+            });
+          }
+        };
 
         // 질문과 답변 저장
         let data = [
           {
             role: "system",
             content: "assistant는 전문적이고 친절한 1인 여행 플래너이다."
-          }, {
+          },{
               role: "user",
               content: "뚜벅이로 LA 일주일 여행 다녀오려고해. 여행 계획 짜줘."
           }, {
@@ -154,20 +189,6 @@
         $input.addEventListener("input", (e) => {
           question = e.target.value;
         });
-
-        // 사용자의 질문을 객체를 만들어서 push
-        const sendQuestion = (question) => {
-          if (question) {
-            data.push({
-              role: "user",
-              content: question,
-            });
-            questionData.push({
-              role: "user",
-              content: question,
-            });
-          }
-        };
 
         // 화면에 질문 그려주는 함수
         const printQuestion = async () => {
