@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For a Traveler(s)</title>
+    <link rel="stylesheet" href="./CSS/index.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header-head">
+      <h1>
+        <a href="./index.html">For a Traveler(s)</a>
+      </h1>
+      <div class="header-click">
+        <a href="#!">Home</a>
+        <a href="#!">About us</a>
+        <a href="#!">Chatbot</a>
+
+        <!-- <a href="#log in">로그인</a>
+        <a href="./h-join.html">회원가입</a>
+        <button type="button">로그아웃</button> -->
+      </div>
+    </div>
+    <!-- //header -->
+    <!-- Home -->
+    <header
+      class="container bg-home-img"
+      style="background-image: url('./header_sky.jpg')"
+    >
+      <div class="home-logo">
+        <img
+          class="logo-img"
+          src="https://dummyimage.com/150x150/6c757d/dee2e6.jpg"
+          alt=""
+        />
+        <p>For A travelers</p>
+      </div>
+     </header> 
+      <!-- //Home -->
+      <!-- About us -->
+    <div class="container box">
+      <h2 class="about-title">ABOUT US</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+        doloribus optio quis quisquam neque recusandae dolores pariatur
+        veritatis sapiente placeat quasi sed quibusdam nulla tenetur voluptatem
+        quae, odio assumenda nesciunt.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non placeat modi optio iusto, accusantium quisquam! Cumque dolore magni necessitatibus? Neque libero nobis maiores velit veritatis, commodi asperiores. Adipisci, saepe molestias.
+      </p>
+    </div>
+    <!-- //About us -->
+    <!-- Chat -->
+    <header
+      class="container bg-img"
+      style="background-image: url('./header_mountain.jpg')"
+    >
+      <div class="home-logo">
+        <p class="chat-title">Let's make a plan together!</p>
+      </div>
+     </header> 
+      <div class="container box">
+        <h2 class="chat-head">여행 일정 입력</h2>
+        <p class="chat-p">구체적으로 작성해주시면 더욱 상세한 여행 계획을 짜드릴 수 있습니다.</p>
+        <form class="chat-form" action="post">
+          <div>
+            <label class="chat-label" for="chat-city">국가/지역</label>
+            <input type="text" id="chat-city" name="chatCity" required />
+          </div>
+          <div>
+            <label class="chat-label" for="chat-date">여행 기간</label>
+            <input type="text" id="chat-date" name="chatDate" required>
+          </div>
+          <div>
+            <label class="chat-label" for="chat-date">희망 여행 테마</label>
+            <input type="text" id="chat-date" name="chatDate" required>
+          </div>
+          <fieldset class="chat-field">
+            <legend>자동차 유무</legend>
+            <ul>
+              <li>
+                <input
+                  type="radio"
+                  name="car-option"
+                  value="yes"
+                  id="chat-yes"
+                  required
+                />
+                <label for="chat-yes">예</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  name="car-option"
+                  value="no"
+                  id="chat-no"
+                  required
+                />
+                <label for="chat-no">아니요</label>
+              </li>
+            </ul>
+          </fieldset>
+          <div>
+              <button class="submit-button" type="submit" class="button">
+                일정 생성
+              </button>
+            </div>
+        </form>
+      </div>
+      <div>
+        <ul></ul>
+        <form action="post">
+          <input type="text" autofocus />
+          <button type="submit">전송</button>
+        </form>
+      </div>
+
+      <script>
+        const $form = document.querySelector("form");
+        const $input = document.querySelector("input");
+        const $chatList = document.querySelector("ul");
+
+        // openAI API
+        let url = `https://estsoft-openai-api.jejucodingcamp.workers.dev/`;
+
+        // 사용자의 질문
+        let question;
+
+        // 질문과 답변 저장
+        let data = [
+          {
+            role: "system",
+            content: "assistant는 전문적이고 친절한 1인 여행 플래너이다."
+          }, {
+              role: "user",
+              content: "뚜벅이로 LA 일주일 여행 다녀오려고해. 여행 계획 짜줘."
+          }, {
+            role: "system",
+            content: "자동차 없이 LA에서 일주일 동안 여행을 즐기기를 원한다면, 아래의 여행 계획을 참고하세요. 이것은 대중 교통과 도보로 이동하여 LA에서 인기있는 명소와 활동을 경험하는 다양한 활동을 포함하고 있습니다. Day 1: - 그리피스 천문대 (Griffith Observatory)에서 일출이나 일몰 감상. -할리우드 산책로 (Hollywood Walk of Fame)를 따라 산책하며 유명인들의 별을 구경. -저녁은 할리우드 혹은 로스파데나에서 맛있는 식사 즐기기. Day2: - 유니버셜 스튜디오 (Universal Studios)에서 한가한 아침을 보내고 신나는 놀이기구를 즐기기. - 월트 디즈니 콘서트 홀 (Walt Disney Concert Hall)에서 클래식 음악 회중 공연 감상. -그리피스 공원 (Griffith Park)에서 자전거를 빌려 돌아다니며 자연 경치 감상. - 저녁은 실버레이크 혹은 로스파데나의 레스토랑에서 현지 음식 즐기기. Day 3: - 샌타모니카 해변 (Santa Monica Beach)에서 해변 산책 및 일몰 감상. - 사운드 앤드 (Sound and)에서 서핑 레슨 받기 혹은 서핑을 관람하며 휴식하기. - 샌타모니카 제3거리 (Third Street Promenade)에서 쇼핑하고 식사하기.- 탑앵글스 (Topanga)에서 자연과 하이킹을 경험하기. Day 4: - 로스앤젤레스 카운티 미술관 (Los Angeles County Museum of Art) 방문하여 예술 작품 감상하기. - 멜로즈 애비뉴 (Melrose Avenue)에서 유니크한 상점과 벽화 구경하기. - 더 그로브 (The Grove)에서 쇼핑이나 레스토랑 즐기기. Day 5: - 그리피스 파크 (Griffith Park)으로 이동하여 그리피스 천문대에서 전망을 감상하고 하이킹하기. - 그리피스 옵시러스 (Griffith Observatory)에서 천문학 박물관 방문하기. -옵시러스 투어를 통해 로스앤젤레스 시내의 아름다운 전망 감상하기. 이것은 일반적인 여행 계획이며, 여행 일정과 활동은 제가 드린 일정표를 기반으로 개인의 선호도에 맞추어 변경하셔도 좋은 여행이 될 것이라고 생각합니다. 즐거운 여행 되세요 :) "
+          }, {
+              role: "user",
+              content: "자동차 렌트할 예정이야. 3박 4일 제주도 여행 계획 짜줘. 나는 수상 스포츠를 좋아해"
+          }, {
+            role: "system",
+            content: "제주도에서 3박 4일 동안 수상 스포츠를 즐기며 다양한 명소를 방문하는 여행 계획을 제안해 드리겠습니다. Day 1: - 아침 식사 후 한라산 등반을 위해 한라산 국립공원으로 이동. -한라산 등반을 즐기며 아름다운 경치와 자연을 감상. - 저녁에는 제주 시내로 이동하여 현지 맛집에서 제주 특산물을 맛보기. Day 2: - 아침에 제주 해양도립공원으로 이동하여 다양한 수상 스포츠 활동을 즐기기 (스노쿨링, 잠수함 투어, 제트 스키 등). - 해양도립공원에서 해변 산책이나 일몰 감상하기. - 저녁에는 제주 시내로 돌아와 맛있는 해산물 요리를 맛보기. Day 3: - 아침에 우도로 이동하여 우도 자전거 여행을 즐기기. - 우도에서 해양 스포츠 활동을 즐기거나 우도 해변에서 휴식하기. - 점심에는 우도의 특산물인 홍어를 맛보기. - 오후에는 성산일출봉으로 이동하여 아름다운 일출을 감상하기. - 성산일출봉 근처에서 저녁 식사 후 호텔로 돌아가 휴식 취하기. Day 4: - 아침에 제주 마라도로 이동하여 수상 스포츠를 즐기기 (패러셀링, 스노클링 등). - 마라도에서 해산물 식사를 즐기며 휴식하기. - 오후에 제주 시내로 돌아와 쇼핑이나 제주 도립 미술관 등 다양한 관광 명소 방문. - 저녁에는 제주의 전통음식을 맛보거나 마지막으로 바다를 바라보며 휴식하기. 이것은 일반적인 여행 계획이며, 여행 일정과 활동은 개인의 선호도에 따라 조정될 수 있습니다. 또한, 제주도의 날씨와 조건에 따라 일정을 조정하는 것이 좋습니다. 즐거운 여행 되세요 :)"
+          },
+        ];
+
+        // 화면에 뿌려줄 데이터, 질문들
+        let questionData = [];
+
+        // input에 입력된 질문 받아오는 함수
+        $input.addEventListener("input", (e) => {
+          question = e.target.value;
+        });
+
+        // 사용자의 질문을 객체를 만들어서 push
+        const sendQuestion = (question) => {
+          if (question) {
+            data.push({
+              role: "user",
+              content: question,
+            });
+            questionData.push({
+              role: "user",
+              content: question,
+            });
+          }
+        };
+
+        // 화면에 질문 그려주는 함수
+        const printQuestion = async () => {
+          if (question) {
+            let li = document.createElement("li");
+            li.classList.add("question");
+            questionData.map((el) => {
+              li.innerText = el.content;
+            });
+            $chatList.appendChild(li);
+            questionData = [];
+            question = false;
+          }
+        };
+
+        // 화면에 답변 그려주는 함수
+        const printAnswer = (answer) => {
+          let li = document.createElement("li");
+          li.classList.add("answer");
+          li.innerText = answer;
+          $chatList.appendChild(li);
+        };
+
+        // api 요청보내는 함수
+        const apiPost = async () => {
+          const result = await fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+            redirect: "follow",
+          })
+            .then((res) => res.json())
+            .then((res) => {
+              printAnswer(res.choices[0].message.content);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        };
+
+        // submit
+        $form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          $input.value = null;
+          sendQuestion(question);
+          apiPost();
+          printQuestion();
+        });
+      </script>
+    </div>
+    <!-- footer -->
+    <div class="main"></div>
+    <p class="footer-p">Copyright &copy; For a Traveler(s) 2023</p>
+    <!-- //footer -->
+  </body>
+</html>
