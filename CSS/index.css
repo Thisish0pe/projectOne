@@ -1,4 +1,8 @@
 /* rgb(68, 103, 68) */
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 h1,
 h2,
@@ -37,6 +41,9 @@ ul {
   padding-top: 130px;
   padding-bottom: 130px;
   height: 169px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bg-img {
@@ -56,17 +63,6 @@ ul {
   margin: 0 auto;
 }
 
-.submit-button {
-  width: 100%;
-  height: 40px;
-  background-color: #346c82;
-  color: white;
-  font: inherit;
-  border: 1px solid #2e5e71;
-  border-radius: 4px;
-  border-width: 0 0 3px 0;
-}
-
 .submit-button:active {
   border: 0;
   margin-top: 1px;
@@ -81,15 +77,25 @@ body {
 
 /* //h-layout */
 
-/* header */
+/* Menu */
 .header-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 60px;
-  background-color: #346c82;
+  width: 90vw;
+  /* background-color: #346c82; */
+  background-color: rgba(52, 108, 130, 0.7);
   padding-left: 65px;
   padding-right: 65px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.header-head ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 .header-head h1 a {
   color: whitesmoke;
@@ -116,7 +122,7 @@ body {
   background: none;
   border: 0;
 }
-/* //header */
+/* //Menu */
 
 /* Home */
 .home-logo {
@@ -135,9 +141,22 @@ body {
 /* //Home */
 
 /* About us */
+.about-title {
+  margin-bottom: 30px;
+}
 /* //About us */
 
 /* Chat */
+.chat-box {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  width: 40%;
+}
+
 .chat-title {
   color: whitesmoke;
   font-size: xx-large;
@@ -147,52 +166,55 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 50%;
+  /* width: 50%; */
   margin: 0 auto;
 }
 
-.chat-head,
-.chat-p {
+.chat-head {
+  margin-bottom: 20px;
   text-align: center;
 }
-.chat-p {
-  margin: 20px 0;
+
+.chat-putinfo {
+  margin-top: 25px;
 }
+
 .chat-form > div {
   margin-bottom: 10px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
-.chat-label {
-  display: inline-block;
-  width: 70px;
+.chat-label,
+legend {
+  margin: 5px 0;
+  font-weight: 500;
 }
 [type="text"] {
   width: 290px;
   height: 32px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-bottom: 3px;
 }
 .chat-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   border: 0;
   margin: 20px 0;
 }
 .chat-field legend {
   float: left;
 }
-legend {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 0;
-  width: 50px;
-}
+
 .chat-field ul {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   gap: 8px 10px;
 }
-.chatul li {
+.chat ul li {
   /* 1.가로배치 */
   display: inline-block;
 }
@@ -204,88 +226,22 @@ legend {
   resize: none;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 50%;
-  height: 400px;
+  width: 90%;
+  height: 300px;
+  padding: 20px;
+}
+
+.submit-button {
+  width: 100%;
+  height: 40px;
+  background-color: #346c82;
+  color: white;
+  font: inherit;
+  border: 1px solid #2e5e71;
+  border-radius: 4px;
+  border-width: 0 0 3px 0;
 }
 /* // Chat */
-
-/* h-post (글쓰기) */
-.post-head {
-  margin: 60px 0 20px 0;
-}
-.post-p {
-  margin-bottom: 20px;
-}
-.post-table {
-  border-top: 2px solid black;
-  border-bottom: 1px solid #ccc;
-  width: 1000px;
-  border-collapse: collapse;
-}
-.post-table th {
-  background-color: #eee;
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
-}
-.post-table td {
-  padding: 10px;
-  border-top: 1px solid #ddd;
-}
-.post-category {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 200px;
-  height: 32px;
-}
-.post-title {
-  width: 290px;
-  height: 32px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-/* // h-post (글쓰기) */
-
-/* index.html (글목록) */
-.index-head {
-  margin: 60px 0 10px 0;
-}
-.index-p {
-  margin-bottom: 20px;
-}
-.index-table {
-  border-top: 2px solid black;
-  border-bottom: 1px solid #ccc;
-  width: 1000px;
-  border-collapse: collapse;
-}
-.index-thead {
-  background-color: #eee;
-  height: 32px;
-}
-.index-tbody {
-  text-align: center;
-}
-.index-tr {
-  border-top: 1px solid #ccc;
-  height: 60px;
-}
-/* 선생님... 여기가 적용이 안됩니당.. */
-.index-table a {
-  display: block;
-  text-align: left;
-  padding: 8px 0;
-  font-weight: bold;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  color: black;
-  text-decoration: none;
-}
-.button a {
-  text-decoration: none;
-  color: inherit;
-}
-/* //index.html (글목록) */
 
 /* footer */
 .footer-p {
