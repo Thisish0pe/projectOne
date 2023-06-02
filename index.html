@@ -8,122 +8,153 @@
     <link rel="stylesheet" href="./CSS/index.css" />
     <script src="./JavaScript/scroll.js"></script>
   </head>
-  <div>
+  <body>
     <!-- Menu -->
     <div class="header-head">
-      <h1>
+      <h1 class="header-title">
         <a href="./index.html">For a Traveler(s)</a>
       </h1>
       <ul class="header-click">
         <li class="on"><a href="#home">Home</a></li>
         <li><a href="#about">About us</a></li>
-        <li><a href="#chat">Chatbot</a></li>
+        <li class="header-chat"><a href="#chat">Chatbot</a></li>
       </ul>
     </div>
     <!-- //Menu-->
     <!-- Home -->
     <div id="contents">
-        <div id="home">
-            <header
-            class="container bg-home-img"
-            style="background-image: url('./header_sky.jpg')"
-            >
-            <div class="home-logo">
-                <img
-                class="logo-img"
-                src="https://dummyimage.com/150x150/6c757d/dee2e6.jpg"
-                alt=""
-                />
-            </div>
-            </header> 
-        </div>
+      <div id="home">
+        <header
+          class="container bg-home-img"
+          style="background-image: url('./header_sky.jpg')"
+        >
+          <div class="home-logo">
+            <img
+              class="logo-img"
+              src="https://dummyimage.com/150x150/6c757d/dee2e6.jpg"
+              alt=""
+            />
+          </div>
+        </header>
+      </div>
       <!-- //Home -->
       <!-- About us -->
-        <div id="about">
-            <div class="container box">
-                <h2 class="about-title">ABOUT US</h2>
-                <p>
-                    가진 청춘 거친 무한한 그들은 더운지라 무엇을 끓는 것이다. 되려니와, 착목한는 힘차게 그림자는 구하지 있는 살았으며, 이상, 것이다. 청춘의 우리의 우리 약동하다. 무엇을 따뜻한 끓는 그와 인간이 있는 것은 미묘한 이것이다. 이상, 과실이 하는 방지하는 끓는다.
-                    <br>
-                    <br>
-                    끓는 시들어 거선의 힘있다. 힘차게 영락과 뜨거운지라, 보라. 얼음 대중을 이상의 커다란 끝까지 싶이 천하를 부패뿐이다. 든 우리 힘차게 부패뿐이다. 것은 청춘 힘차게 따뜻한 봄바람이다. 무한한 이 우는 눈이 크고 아름답고 싶이 쓸쓸한 커다란 아니다. 않는 발휘하기 할지라도 길을 얼음에 황금시대다.
-                </p>
-            </div>
+      <div id="about">
+        <div class="container box">
+          <h2 class="about-title">ABOUT US</h2>
+          <p>
+            가진 청춘 거친 무한한 그들은 더운지라 무엇을 끓는 것이다. 되려니와,
+            착목한는 힘차게 그림자는 구하지 있는 살았으며, 이상, 것이다. 청춘의
+            우리의 우리 약동하다. 무엇을 따뜻한 끓는 그와 인간이 있는 것은
+            미묘한 이것이다. 이상, 과실이 하는 방지하는 끓는다.
+            <br />
+            <br />
+            끓는 시들어 거선의 힘있다. 힘차게 영락과 뜨거운지라, 보라. 얼음
+            대중을 이상의 커다란 끝까지 싶이 천하를 부패뿐이다. 든 우리 힘차게
+            부패뿐이다. 것은 청춘 힘차게 따뜻한 봄바람이다. 무한한 이 우는 눈이
+            크고 아름답고 싶이 쓸쓸한 커다란 아니다. 않는 발휘하기 할지라도 길을
+            얼음에 황금시대다.
+          </p>
         </div>
-    <!-- //About us -->
-    <!-- Chat -->
-        <div id="chat">
-            <header
-            class="container bg-img"
-            style="background-image: url('./header_mountain.jpg')"
-            >
-            <div class="home-logo">
-                <p class="chat-title">Let's make a plan together!</p>
-            </div>
-            </header> 
-            <div class="container">
-            <div class="chat-box">
-                <h2 class="chat-head chat-putinfo">여행 일정 입력</h2>
-                <form class="chat-form" action="post">
-                <div>
-                    <label class="chat-label" for="chat-city">어디로 여행하시나요?</label>
-                    <input type="text" id="chat-city" name="chatCity" placeholder= "예: 대한민국 서울" required />
-                </div>
-                <div>
-                    <label class="chat-label" for="chat-date">여행 기간을 입력해 주세요.</label>
-                    <input type="text" id="chat-date" name="chatDate" placeholder= "예: 3박 4일" required>
-                </div>
-                <div>
-                    <label class="chat-label" for="chat-theme">희망하시는 여행 테마를 입력해 주세요.</label>
-                    <input type="text" id="chat-theme" name="chatTheme" placeholder= "예: 미술관 투어, 맛집 투어 등" required>
-                </div>
-                <fieldset class="chat-field">
-                    <legend>여행 중 자동차를 이용하시나요?</legend>
-                    <ul>
-                    <li>
-                        <input
-                        type="radio"
-                        name="car-option"
-                        value="yes"
-                        id="chat-yes"
-                        required
-                        />
-                        <label for="chat-yes">예</label>
-                    </li>
-                    <li>
-                        <input
-                        type="radio"
-                        name="car-option"
-                        value="no"
-                        id="chat-no"
-                        required
-                        />
-                        <label for="chat-no">아니요</label>
-                    </li>
-                    </ul>
-                </fieldset>
-                <div>
-                    <button class="submit-button" type="submit" class="button">
-                        일정 생성
-                    </button>
-                    </div>
-                </form>
-            </div>
-                <div class="chat-box">
-                <h2 class="chat-head">여행 일정</h2>
-                    <textarea
-                    class="chat-textarea"
-                    name="content"
-                    id="chat-content"
-                    cols="30"
-                    rows="10"
-                    placeholder= "여행 일정 입력 후 '일정생성'버튼을 누르면 여행 일정이 자동으로 생성됩니다 :)"
-                    readonly
-                    ></textarea>
-                </div>
-            </div>
-            <script src="./JavaScript/index.js"></script>
+      </div>
+      <!-- //About us -->
+      <!-- Chat -->
+      <div id="chat">
+        <header
+          class="container bg-img"
+          style="background-image: url('./header_mountain.jpg')"
+        >
+          <div class="home-logo">
+            <p class="chat-title">Let's make a plan together!</p>
+          </div>
+        </header>
+        <div class="container">
+          <div class="chat-box">
+            <h2 class="chat-head chat-putinfo">여행 일정 입력</h2>
+            <form class="chat-form" action="post">
+              <div>
+                <label class="chat-label" for="chat-city"
+                  >어디로 여행하시나요?</label
+                >
+                <input
+                  type="text"
+                  id="chat-city"
+                  name="chatCity"
+                  placeholder="예: 대한민국 서울"
+                  required
+                />
+              </div>
+              <div>
+                <label class="chat-label" for="chat-date"
+                  >여행 기간을 입력해 주세요.</label
+                >
+                <input
+                  type="text"
+                  id="chat-date"
+                  name="chatDate"
+                  placeholder="예: 3박 4일"
+                  required
+                />
+              </div>
+              <div>
+                <label class="chat-label" for="chat-theme"
+                  >희망하시는 여행 테마를 입력해 주세요.</label
+                >
+                <input
+                  type="text"
+                  id="chat-theme"
+                  name="chatTheme"
+                  placeholder="예: 미술관 투어, 맛집 투어 등"
+                  required
+                />
+              </div>
+              <fieldset class="chat-field">
+                <legend>여행 중 자동차를 이용하시나요?</legend>
+                <ul>
+                  <li>
+                    <input
+                      type="radio"
+                      name="car-option"
+                      value="yes"
+                      id="chat-yes"
+                      required
+                    />
+                    <label for="chat-yes">예</label>
+                  </li>
+                  <li>
+                    <input
+                      type="radio"
+                      name="car-option"
+                      value="no"
+                      id="chat-no"
+                      required
+                    />
+                    <label for="chat-no">아니요</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <div>
+                <button class="submit-button" type="submit" class="button">
+                  일정 생성
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="chat-box">
+            <h2 class="chat-head">여행 일정</h2>
+            <textarea
+              class="chat-textarea"
+              name="content"
+              id="chat-content"
+              cols="30"
+              rows="10"
+              placeholder="여행 일정 입력 후 '일정생성'버튼을 누르면 여행 일정이 자동으로 생성됩니다 :)"
+              readonly
+            ></textarea>
+          </div>
         </div>
+        <script src="./JavaScript/index.js"></script>
+      </div>
     </div>
     <!-- footer -->
     <div class="main"></div>
