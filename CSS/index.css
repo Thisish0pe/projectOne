@@ -64,17 +64,15 @@ body {
 .header-title {
   padding-left: 7%;
 }
-.header-click {
-  padding-right: 7%;
-}
 .header-toggleBtn {
-  /* display: none; */
+  display: none;
   position: absolute;
   right: 7%;
   font-size: 24px;
   color: whitesmoke;
 }
 .header-head ul {
+  padding-right: 7%;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
