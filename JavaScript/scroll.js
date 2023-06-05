@@ -1,4 +1,4 @@
-$(function () {
+jQuery(function () {
   let $menu = $("#top_menu ul li"),
     $contents = $("#contents > div");
 

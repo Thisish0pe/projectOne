@@ -6,10 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>For a Traveler(s)</title>
     <link rel="stylesheet" href="./CSS/index.css" />
+    <link rel="stylesheet" href="./CSS/media.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=IBM+Plex+Sans+KR:wght@100;200;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/061f4f01cc.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./JavaScript/scroll.js"></script>
+    <script src="./JavaScript/menu.js"></script>
   </head>
   <body>
-    <!-- Menu -->
+    <!-- header -->
     <div class="header-head">
       <h1 class="header-title">
         <a href="./index.html">For a Traveler(s)</a>
@@ -17,11 +29,14 @@
       <ul class="header-click">
         <li class="on"><a href="#home">Home</a></li>
         <li><a href="#about">About us</a></li>
-        <li class="header-chat"><a href="#chat">Chatbot</a></li>
+        <li><a href="#chat">Chatbot</a></li>
       </ul>
+      <a href="#" class="header-toggleBtn">
+        <i class="fa-solid fa-bars"></i>
+      </a>
     </div>
-    <!-- //Menu-->
-    <!-- Home -->
+    <!-- //header-->
+    <!-- home -->
     <div id="contents">
       <div id="home">
         <header
@@ -37,8 +52,8 @@
           </div>
         </header>
       </div>
-      <!-- //Home -->
-      <!-- About us -->
+      <!-- //home -->
+      <!-- about us -->
       <div id="about">
         <div class="container box">
           <h2 class="about-title">ABOUT US</h2>
@@ -57,8 +72,8 @@
           </p>
         </div>
       </div>
-      <!-- //About us -->
-      <!-- Chat -->
+      <!-- //about us -->
+      <!-- chat -->
       <div id="chat">
         <header
           class="container bg-img"
@@ -68,7 +83,7 @@
             <p class="chat-title">Let's make a plan together!</p>
           </div>
         </header>
-        <div class="container">
+        <div class="chat-container">
           <div class="chat-box chat-put">
             <h2 class="chat-head">여행 일정 입력</h2>
             <form class="chat-form" action="post">
@@ -153,9 +168,10 @@
             ></textarea>
           </div>
         </div>
-        <script src="./JavaScript/index.js"></script>
+        <script src="./JavaScript/chatjs"></script>
       </div>
     </div>
+    <!-- //chat -->
     <!-- footer -->
     <div class="main"></div>
     <p class="footer-p">Copyright &copy; For a Traveler(s) 2023</p>
