@@ -14,7 +14,7 @@
   .header-head ul.active {
     display: flex;
   }
-  .header_toggleBtn {
+  .header-toggleBtn {
     display: block;
   }
   .chat-container {

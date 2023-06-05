@@ -89,6 +89,9 @@ const apiPost = async () => {
     .then((res) => {
       printAnswer(res.choices[0].message.content);
     })
+    .then(function resetCursor() {
+      document.body.style.cursor = "default";
+    })
     .catch((err) => {
       console.log(err);
     });

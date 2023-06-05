@@ -4,10 +4,3 @@ function changeCursor() {
     document.body.style.cursor = "wait";
   }
 }
-// 커서를 기본 상태로 되돌리는 함수
-function resetCursor() {
-  document.body.style.cursor = "default";
-}
-
-// 답변을 받은 후 커서를 기본 상태로 되돌림
-document.addEventListener("DOMContentLoaded", resetCursor);
