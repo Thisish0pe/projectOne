@@ -102,7 +102,48 @@ body {
   border: 0;
 }
 /* //header */
+/* login */
+#login-modal {
+  display: none;
+  width: 400px;
+  height: 400px;
+  padding: 20px 60px;
+  background-color: #f4f3e7f2;
+  border-style: none;
+  border-radius: 10px;
+}
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 5px;
+}
+.login-container {
+  width: 100%;
+  padding-top: 15%;
+  padding-bottom: 12%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.description {
+  padding: 15px 0;
+}
+.login > div {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
 
+/* .login > div:nth-child(3) {
+  margin: 20px 0;
+} */
+
+.label-width {
+  display: inline-block;
+  width: 70px;
+}
+/* //login */
 /* home */
 .home-logo {
   display: flex;
@@ -172,7 +213,8 @@ legend {
   margin: 5px 0;
   font-weight: 500;
 }
-[type="text"] {
+[type="text"],
+[type="password"] {
   width: 290px;
   height: 32px;
   border: 1px solid #ccc;
@@ -208,7 +250,7 @@ legend {
   resize: none;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 100%;
+  width: 600px;
   height: 330px;
   padding: 20px;
 }
