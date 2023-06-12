@@ -35,7 +35,7 @@ const makePrompt = function () {
     role: "user",
     content: `여행계획을 만들어줘. 기간:${date}, 지역:${city}, 희망여행테마:${theme},자동차유무:${carOption} \n 이 내용을 기반으로 여행계획을 만들어줘`,
   });
-  console.log(data);
+  // console.log(data);
 };
 
 // 질문과 답변 저장
@@ -93,7 +93,7 @@ const apiPost = async () => {
       document.body.style.cursor = "default";
     })
     .catch((err) => {
-      console.log(err);
+      // console.log(err);
     });
 };
 

@@ -53,9 +53,32 @@ legend {
   gap: 8px 10px;
 }
 .field ul li {
-  /* 1.가로배치 */
   display: inline-block;
 }
 [type="checkbox"]:checked + label {
   font-weight: bold;
 }
+/* footer */
+.footer-p {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+}
+/* //footer */
+/* media */
+@media screen and (max-width: 800px) {
+  .join-container {
+    padding: 100px 0;
+  }
+  .join-form {
+    width: 300px;
+  }
+  .join-label {
+    width: 75px;
+  }
+  .join-field ul {
+    gap: 6px;
+  }
+}
+/* //media */

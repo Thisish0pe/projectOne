@@ -7,7 +7,6 @@
     <title>For a Traveler(s)</title>
     <link rel="stylesheet" href="./CSS/index.css" />
     <link rel="stylesheet" href="./CSS/join.css" />
-    <link rel="stylesheet" href="./CSS/media.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,84 +39,91 @@
     <!-- join -->
     <div class="main">
       <div class="join-container">
-        <h2 class="join-head">회원가입</h2>
-        <p class="join-p">원활한 서비스 이용을 위해 회원가입을 해주세요.</p>
-        <form class="join-form" action="post">
-          <div>
-            <label class="join-label" for="user-id">아이디</label>
-            <input type="text" id="user-id" name="userId" required />
-          </div>
-          <div>
-            <label class="join-label" for="user-email">이메일</label>
-            <input type="email" id="user-email" name="userEmail" required />
-          </div>
-          <div>
-            <label class="join-label" for="user-pw">비밀번호</label>
-            <input type="password" id="user-pw" name="userPw" required />
-          </div>
-          <div>
-            <label class="join-label" for="user-nickname">닉네임</label>
-            <input
-              type="text"
-              id="user-nickname"
-              name="userNickname"
-              required
-            />
-          </div>
-          <fieldset class="join-field">
-            <legend class="join-gender">성별</legend>
-            <ul>
-              <li>
-                <input
-                  type="radio"
-                  name="gender"
-                  value="male"
-                  id="male"
-                  required
-                />
-                <label for="male">남성</label>
-              </li>
-              <li>
-                <input type="radio" name="gender" value="females" id="female" />
-                <label for="female">여성</label>
-              </li>
-              <li>
-                <input type="radio" name="gender" value="no" id="no" />
-                <label for="no">선택 안함</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="join-field">
-            <legend class="join-country">희망 여행 국가</legend>
-            <ul>
-              <li>
-                <input type="checkbox" name="korea" id="korea" />
-                <label for="korea">한국</label>
-              </li>
-              <li>
-                <input type="checkbox" name="usa" id="usa" />
-                <label for="usa">미국</label>
-              </li>
-              <li>
-                <input type="checkbox" name="indian" id="indian" />
-                <label for="indian">인도</label>
-              </li>
-              <li>
-                <input type="checkbox" name="usa" id="usa" />
-                <label for="usa">일본</label>
-              </li>
-              <li>
-                <input type="checkbox" name="eu" id="eu" />
-                <label for="eu">유럽 국가</label>
-              </li>
-            </ul>
-          </fieldset>
-          <div>
-            <button class="submit-button" type="submit" class="button">
-              회원가입
-            </button>
-          </div>
-        </form>
+        <div class="join-media">
+          <h2 class="join-head">회원가입</h2>
+          <p class="join-p">원활한 서비스 이용을 위해 회원가입을 해주세요.</p>
+          <form class="join-form" action="post">
+            <div>
+              <label class="join-label" for="user-id">아이디</label>
+              <input type="text" id="user-id" name="userId" required />
+            </div>
+            <div>
+              <label class="join-label" for="user-email">이메일</label>
+              <input type="email" id="user-email" name="userEmail" required />
+            </div>
+            <div>
+              <label class="join-label" for="user-pw">비밀번호</label>
+              <input type="password" id="user-pw" name="userPw" required />
+            </div>
+            <div>
+              <label class="join-label" for="user-nickname">닉네임</label>
+              <input
+                type="text"
+                id="user-nickname"
+                name="userNickname"
+                required
+              />
+            </div>
+            <fieldset class="join-field">
+              <legend class="join-gender">성별</legend>
+              <ul>
+                <li>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="male"
+                    id="male"
+                    required
+                  />
+                  <label for="male">남성</label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="females"
+                    id="female"
+                  />
+                  <label for="female">여성</label>
+                </li>
+                <li>
+                  <input type="radio" name="gender" value="no" id="no" />
+                  <label for="no">선택 안함</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="join-field">
+              <legend class="join-country">희망 여행 국가</legend>
+              <ul>
+                <li>
+                  <input type="checkbox" name="korea" id="korea" />
+                  <label for="korea">한국</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="usa" id="usa" />
+                  <label for="usa">미국</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="indian" id="indian" />
+                  <label for="indian">인도</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="japan" id="japan" />
+                  <label for="japan">일본</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="eu" id="eu" />
+                  <label for="eu">유럽 국가</label>
+                </li>
+              </ul>
+            </fieldset>
+            <div>
+              <button class="submit-button" type="submit" class="button">
+                회원가입
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <!-- //join -->
