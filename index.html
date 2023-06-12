@@ -17,8 +17,8 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
-      integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE="
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
       crossorigin="anonymous"
     ></script>
     <script src="./JavaScript/scroll.js"></script>
@@ -78,11 +78,7 @@
           style="background-image: url('./image/header_sky.jpg')"
         >
           <div class="home-logo">
-            <img
-              class="logo-img"
-              src="https://dummyimage.com/150x150/6c757d/dee2e6.jpg"
-              alt=""
-            />
+            <img class="logo-img" src="./image/logo.jpg" alt="" />
           </div>
         </header>
       </div>
@@ -194,22 +190,25 @@
             </form>
           </div>
           <div class="chat-box chat-return">
-            <h2 class="chat-head">여행 일정</h2>
-            <!-- loader -->
-            <div class="loader"></div>
-            <textarea
-              class="chat-textarea"
-              name="content"
-              id="chat-content"
-              cols="30"
-              rows="10"
-              placeholder="여행 일정 입력 후 '일정생성'버튼을 누르면 여행 일정이 자동으로 생성됩니다 :)"
-              readonly
-            ></textarea>
+            <div class="loader-box">
+              <h2 class="chat-head">여행 일정</h2>
+              <!-- loader -->
+              <div class="loader"></div>
+              <textarea
+                class="chat-textarea"
+                name="content"
+                id="chat-content"
+                cols="30"
+                rows="10"
+                placeholder="여행 일정 입력 후 '일정생성'버튼을 누르면 여행 일정이 자동으로 생성됩니다 :)"
+                readonly
+              ></textarea>
+            </div>
           </div>
         </div>
         <script src="./JavaScript/chat.js"></script>
         <script src="./JavaScript/mousecursor.js"></script>
+        <script src="./JavaScript/loader.js"></script>
       </div>
     </div>
     <!-- //chat -->

@@ -84,24 +84,19 @@ const apiPost = async () => {
     },
     body: JSON.stringify(data),
     redirect: "follow",
-  })
-    .then((res) => res.json())
-    .then((res) => {
-      printAnswer(res.choices[0].message.content);
-    })
-    .then(function resetCursor() {
-      document.body.style.cursor = "default";
-    })
-    .catch((err) => {
-      // console.log(err);
-    });
+  });
+  const resultJson = await result.json();
+  return resultJson;
 };
 
 // submit
-$form.addEventListener("submit", (e) => {
+$form.addEventListener("submit", async (e) => {
   e.preventDefault();
   makePrompt();
-  apiPost();
+  const resultJson = await apiPost();
+  printAnswer(resultJson.choices[0].message.content);
+  document.body.style.cursor = "default";
+  $(".loader").fadeOut();
 });
 
 // 화면에 답변 그려주는 함수
