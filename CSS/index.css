@@ -338,16 +338,6 @@ body {
   .home-logo {
     height: 150px;
   }
-  #login-modal {
-    padding: 20px;
-    width: 70%;
-  }
-  .login {
-    width: 100%;
-  }
-  .label-width {
-    width: 35%;
-  }
   .description {
     font-size: 14px;
   }
@@ -367,6 +357,18 @@ body {
   }
   .about-title {
     width: 300px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #login-modal {
+    padding: 20px;
+    width: 70%;
+  }
+  .login {
+    width: 100%;
+  }
+  .label-width {
+    width: 35%;
   }
 }
 /* //media */
