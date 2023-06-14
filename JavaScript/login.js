@@ -27,8 +27,6 @@ function modal(id) {
   modal.setStyle({
     position: "fixed",
     display: "block",
-    // boxShadow:
-    //   "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
 
     // 희미한 레이어 위에 보이기
     zIndex: zIndex + 1,
@@ -37,8 +35,6 @@ function modal(id) {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    // msTransform: "translate(-50%, -50%)",
-    // webkitTransform: "translate(-50%, -50%)",
   });
 }
 
