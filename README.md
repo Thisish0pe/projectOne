@@ -20,8 +20,7 @@
 ### 3.1 구조
 ### 3.2 일정
 
-![projectOne_plan](https://github.com/Thisish0pe/projectOne/assets/130428546/99592818-a068-4435-8550-b8fed18211f9)
-
+![스크린샷 2023-06-14 오전 9 07 20](https://github.com/Thisish0pe/projectOne/assets/130428546/b9db5606-3406-464a-8cd9-347ef5c6df20)
 
 ## 4. Ul/BM
 ### 4.0 피그마 URL
