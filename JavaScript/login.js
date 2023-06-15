@@ -1,9 +1,9 @@
 function modal(id) {
-  var zIndex = 9999;
-  var modal = document.getElementById(id);
+  let zIndex = 9999;
+  let modal = document.getElementById(id);
 
   // 모달 div 뒤 희미한 레이어
-  var bg = document.createElement("div");
+  let bg = document.createElement("div");
   bg.setStyle({
     position: "fixed",
     zIndex: zIndex,
@@ -40,7 +40,7 @@ function modal(id) {
 
 // Element 에 style 한번에 오브젝트로 설정하는 함수 추가
 Element.prototype.setStyle = function (styles) {
-  for (var k in styles) this.style[k] = styles[k];
+  for (let k in styles) this.style[k] = styles[k];
   return this;
 };
 

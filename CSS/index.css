@@ -172,7 +172,17 @@ body {
 
 /* about us */
 .about-title {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+.about-subtitle {
   margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  color: gray;
+}
+.about-contents {
+  margin-bottom: 20px;
 }
 /* //about us */
 
